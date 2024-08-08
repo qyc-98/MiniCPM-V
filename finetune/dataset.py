@@ -373,7 +373,10 @@ def preprocess(
             parts = re.split(pattern, conversation['content'])
             for i, part in enumerate(parts):
                 if re.match(pattern, part):
-                    parts[i] = image_placeholder_dict.get(part, part)  # 替换成占位符，如果没有匹配则保持原样
+                    if part in image_placeholder_dict:
+                        parts[i] = image_placeholder_dict[part]
+                    else:
+                        logger.info(f'Unreplaced image tag: {part}')
             conversation['content'] = ''.join(parts)
             new_conversations.append(conversation)
         conversations = new_conversations
