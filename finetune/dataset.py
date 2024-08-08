@@ -370,10 +370,11 @@ def preprocess(
         pattern = r'<image_\d+>'
         new_conversations = []
         for conversation in conversations:
-            matches = re.findall(pattern, conversation['content'])
-            for img_id in range(matches):
-                image_placeholder = image_placeholder_dict[img_id]
-                conversation = conversation.replace(img_id, image_placeholder, 1)
+            parts = re.split(pattern, conversation['content'])
+            for i, part in enumerate(parts):
+                if re.match(pattern, part):
+                    parts[i] = image_placeholder_dict.get(part, part)  # 替换成占位符，如果没有匹配则保持原样
+            conversation['content'] = ''.join(parts)
             new_conversations.append(conversation)
         conversations = new_conversations
         input_dict = conversation_to_ids(conversations, tokenizer, llm_type, new_schema)
