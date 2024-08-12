@@ -28,6 +28,8 @@ Join our <a href="docs/wechat.md" target="_blank"> 💬 WeChat</a>
 ## News <!-- omit in toc -->
 
 #### 📌 Pinned
+
+* [2024.08.10] 🚀🚀🚀 MiniCPM-Llama3-V 2.5 is now fully supported by [official](https://github.com/ggerganov/llama.cpp) llama.cpp! GGUF models of various sizes are available [here](https://huggingface.co/openbmb/MiniCPM-Llama3-V-2_5-gguf).
 * [2024.08.06] 🔥🔥🔥 We open-source MiniCPM-V 2.6, which outperforms GPT-4V on single image, multi-image and video understanding. It advances popular features of MiniCPM-Llama3-V 2.5, and can support real-time video understanding on iPad. Try it now!
 * [2024.08.03] MiniCPM-Llama3-V 2.5 technical report is released! See [here](https://arxiv.org/abs/2408.01800).
 * [2024.07.19] MiniCPM-Llama3-V 2.5 supports vLLM now! See [here](#inference-with-vllm).
@@ -1681,10 +1683,10 @@ This project is developed by the following institutions:
 If you find our model/code/paper helpful, please consider cite our papers 📝 and star us ⭐️！
 
 ```bib
-@article{yao2024minicpmv,
-      title={MiniCPM-V: A GPT-4V Level MLLM on Your Phone}, 
-      author={Yao, Yuan and Yu, Tianyu and Zhang, Ao and Wang, Chongyi and Cui, Junbo and Zhu, Hongji and Cai, Tianchi and Li, Haoyu and Zhao, Weilin and He, Zhihui and Chen, Qianyu and Zhou, Huarong and Zou, Zhensheng and Zhang, Haoye and Hu, Shengding and Zheng, Zhi and Zhou, Jie and Cai, Jie and Han, Xu and Zeng, Guoyang and Li, Dahai and Liu, Zhiyuan and Sun, Maosong},
-      journal={arXiv preprint 2408.01800},
-      year={2024},
+@article{yao2024minicpm,
+  title={MiniCPM-V: A GPT-4V Level MLLM on Your Phone},
+  author={Yao, Yuan and Yu, Tianyu and Zhang, Ao and Wang, Chongyi and Cui, Junbo and Zhu, Hongji and Cai, Tianchi and Li, Haoyu and Zhao, Weilin and He, Zhihui and others},
+  journal={arXiv preprint arXiv:2408.01800},
+  year={2024}
 }
 ```
